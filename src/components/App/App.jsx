@@ -34,7 +34,6 @@ function App() {
         fetchGallery={fetchGallery}
         galleryList={galleryList}
         />
-        <img src="images/goat_small.jpg"/>
       </div>
     );
 } //end of App Function
