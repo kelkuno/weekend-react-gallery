@@ -5,6 +5,7 @@ import axios from 'axios';
 function GalleryItem ({item, fetchGallery}){
 
     const [likes, setLikes] = useState(0);
+    const [description, setDescription] = useState(false);
 
     const handleSubmit = (event) =>{
         event.preventDefault();
@@ -21,9 +22,17 @@ function GalleryItem ({item, fetchGallery}){
         })
     }//end of handleSubmit
 
+    const handleDescription = () => {
+        setDescription(!description);
+        console.log(description);
+    }
+
     return (
         <div>
-            <img src={item.path}/>
+            {description ?
+            <p onClick={handleDescription}>{item.description}</p> :
+            <img onClick={handleDescription} src={item.path}/>
+            }
             <button onClick={handleSubmit} type="button">Love it!</button>
             <p>{item.likes} people like this!</p>
         </div>
