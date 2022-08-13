@@ -28,11 +28,13 @@ function GalleryItem ({item, fetchGallery}){
     }
 
     return (
-        <div>
-            {description ?
-            <p onClick={handleDescription}>{item.description}</p> :
-            <img onClick={handleDescription} src={item.path}/>
-            }
+        <div className = "entry">
+            <div className="swap" onClick={handleDescription}>
+                {description ?
+                <p>{item.description}</p> :
+                <img src={item.path}/>
+                }
+            </div>
             <button onClick={handleSubmit} type="button">Love it!</button>
             <p>{item.likes} people like this!</p>
         </div>

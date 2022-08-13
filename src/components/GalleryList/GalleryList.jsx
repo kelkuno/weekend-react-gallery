@@ -1,10 +1,12 @@
+import './GalleryList.css'
+
 import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
 function GalleryList({fetchGallery, galleryList}){
 
     return (
-        <div>
+        <div className="wrapper">
                 {galleryList.map(item =>
                     <GalleryItem 
                     key={item.id}
