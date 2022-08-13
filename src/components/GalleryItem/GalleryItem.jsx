@@ -1,7 +1,9 @@
-function GalleryItem (){
+function GalleryItem ({item}){
 
     return (
-        <h5>test</h5>
+        <div>
+            <img src={item.path}/>
+        </div>
     )
 
 }//end of gallery Item
